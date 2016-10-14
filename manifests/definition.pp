@@ -1,33 +1,46 @@
-# == Define: template::definition
+# Definition: template
+# ===========================
 #
-# Full description of defined resource type template::definition here.
+# Full description of defined resource template here.
 #
-# === Parameters
+# Parameters
+# ----------
 #
-# [*namevar*]
-#   If there is a parameter that defaults to the value of the title string
-#   when not explicitly set, you must always say so.  This parameter can be
-#   referred to as a "namevar," since it's functionally equivalent to the
-#   namevar of a core resource type.
+# Document parameters here.
 #
-# [*basedir*]
-#   Description of this variable.  For example, "This parameter sets the
-#   base directory for this resource type.  It should not contain a trailing
-#   slash."
+# * `sample parameter`
+# Explanation of what this parameter affects and what it defaults to.
+# e.g. "Specify one or more upstream ntp servers as an array."
 #
-# === Examples
+# Variables
+# ----------
 #
-#   template::definition { 'namevar':
-#     basedir => '/tmp/src',
-#   }
+# Here you should define a list of variables that this module would require.
 #
-# === Authors
+# * `sample variable`
+#  Explanation of how this variable affects the function of this class and if
+#  it has a default. e.g. "The parameter enc_ntp_servers must be set by the
+#  External Node Classifier as a comma separated list of hostnames." (Note,
+#  global variables should be avoided in favor of class parameters as
+#  of Puppet 2.6.)
 #
-# Author Name <author@domain.tld>
+# Examples
+# --------
 #
-# === Copyright
+# @example
+#    template::definition { 'template_instance':
+#      attribute => [ 'value1', 'value2' ],
+#    }
 #
-# No copyright expressed, or implied.
+# Authors
+# -------
+#
+# Author Name <author@domain.com>
+#
+# Copyright
+# ---------
+#
+# Copyright 2016 Your name here, unless otherwise noted.
 #
 define template::definition ($basedir='') {
 
